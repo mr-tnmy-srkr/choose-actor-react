@@ -1,7 +1,8 @@
-
 import { useEffect, useState } from "react";
 import Cards from "./components/Cards/Cards";
 import Cart from "./components/Cart/Cart";
+import Swal from "sweetalert2";
+
 
 function Home() {
   const [data, setData] = useState([]);
@@ -22,7 +23,19 @@ function Home() {
     // console.log(data);
     let newCost = cost + data.salary;
     if (newCost > 30000) {
-      return alert("You don't have enough money to buy");
+      return Swal.fire({
+        title:"You don,t have enough money to purchase",
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("/images/nyan-cat.gif")
+          left top
+          no-repeat
+        `
+      })
     } else {
       setCost(newCost);
       const newActorName = [...actorName, data.name];
