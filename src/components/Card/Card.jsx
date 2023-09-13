@@ -1,8 +1,9 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
 function Card({ data,handleAddToCart}) {
   // console.log(data);
   const { name, role, image, salary } = data;
-  // console.log(image);
+  
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
@@ -27,5 +28,8 @@ function Card({ data,handleAddToCart}) {
     </div>
   );
 }
-
+Card.propTypes = {
+  data :PropTypes.object.isRequired,
+  handleAddToCart :PropTypes.func.isRequired,
+}
 export default Card;
