@@ -10,7 +10,8 @@ Currently, two official plugins are available:
 
 live link : 
 
-1. choose-actors.surge.sh
-
+1. https://choose-actors.surge.sh
 
 2. https://choose-actor-for-movie.vercel.app/
+
+3. https://choose-actor.netlify.app/
